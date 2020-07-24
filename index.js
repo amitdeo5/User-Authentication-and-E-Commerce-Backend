@@ -1,17 +1,13 @@
 const express = require('express');
 
+
 const app = express();
 
 
-app.get('/',function(req,res){
-    console.log('GET request')
-    res.send({name:});
-});
+app.use('/api',require('./api.js'));
 
 
-
-
-app.listen(process.env.port|| 4000,function(){
+app.listen(process.env.port|| 9000,function(){
 console.log('running');
 
 });
