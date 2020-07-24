@@ -8,7 +8,17 @@ router.get('/platform',function(req,res){
 
 //newuser
 router.post('/platform',function(req,res){
-    res.send({type:'POST'});
+    console.log(req.body);
+    res.send({
+        type:'POST',
+        name:req.body.name,
+        email:req.body.email,
+        contact:req.body.contact,
+        date:req.body.date,
+        products:req.body.products,
+        budget:req.body.budget
+
+  });
 });
 
 //update 
