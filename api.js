@@ -19,7 +19,11 @@ router.post('/platform',function(req,res){
 
 //update 
 router.put('/platform/:id',function(req,res){
-    res.send({type:'PUT'});
+    schema.findByIdAndUpdate({_id:req.params.id}, req.body).then(function(){
+        schema.findOne({_id:req.params.id}).then(function(schema){
+           res.send(schema);
+        });
+    });  
 });
 
 //del
