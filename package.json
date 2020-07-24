@@ -1,0 +1,25 @@
+{
+  "name": "User-Authentication-and-E-Commerce-Backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitdeo5/User-Authentication-and-E-Commerce-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitdeo5/User-Authentication-and-E-Commerce-Backend/issues"
+  },
+  "homepage": "https://github.com/amitdeo5/User-Authentication-and-E-Commerce-Backend#readme"
+}
