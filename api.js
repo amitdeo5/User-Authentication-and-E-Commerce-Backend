@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const schema = require('./schema.js');
 
 //getlist
 router.get('/platform',function(req,res){
@@ -8,17 +9,12 @@ router.get('/platform',function(req,res){
 
 //newuser
 router.post('/platform',function(req,res){
-    console.log(req.body);
-    res.send({
-        type:'POST',
-        name:req.body.name,
-        email:req.body.email,
-        contact:req.body.contact,
-        date:req.body.date,
-        products:req.body.products,
-        budget:req.body.budget
+    schema.create(req.body).then(function(schema){
 
-  });
+        res.send(schema);
+
+    });
+    
 });
 
 //update 
