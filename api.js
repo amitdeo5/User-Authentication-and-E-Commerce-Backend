@@ -24,7 +24,10 @@ router.put('/platform/:id',function(req,res){
 
 //del
 router.delete('/platform/:id',function(req,res){
-    res.send({type:'DELETE'});
+    schema.findByIdAndRemove({_id:req.params.id}).then(function(schema){
+         res.send(schema);
+    });
+    
 });
 
 module.exports = router;
