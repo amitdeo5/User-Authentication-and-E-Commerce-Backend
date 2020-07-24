@@ -13,7 +13,7 @@ router.post('/platform',function(req,res){
 
 //update 
 router.put('/platform/:id',function(req,res){
-    res.send({type:'GET'});
+    res.send({type:'PUT'});
 });
 
 //del
