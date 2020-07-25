@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -14,7 +15,7 @@ const UserSchema = new Schema({
     },
 
     contact: {
-        type : String,
+        type : [Number],
     },
 
     date : {
@@ -28,7 +29,7 @@ const UserSchema = new Schema({
     },
 
     budget : {
-        type: String
+        type: [Number]
     },
 
 });

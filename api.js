@@ -1,11 +1,17 @@
 const express = require('express');
+
 const router = express.Router();
+
 const schema = require('./schema.js');
+
+
 
 //getlist
 router.get('/platform',function(req,res){
     res.send({type:'GET'});
 });
+
+
 
 //newuser
 router.post('/platform',function(req,res){
@@ -17,6 +23,7 @@ router.post('/platform',function(req,res){
     
 });
 
+
 //update 
 router.put('/platform/:id',function(req,res){
     schema.findByIdAndUpdate({_id:req.params.id}, req.body).then(function(){
@@ -25,6 +32,7 @@ router.put('/platform/:id',function(req,res){
         });
     });  
 });
+
 
 //del
 router.delete('/platform/:id',function(req,res){
